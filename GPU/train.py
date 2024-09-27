@@ -12,13 +12,11 @@ from rlcard.utils import (
     plot_curve,
 )
 from rlcard.agents import DQNAgent, NFSPAgent
-from rlcard.agents import BaseAgent
 
 # Définition d'un agent humain personnalisé
-class HumanAgent(BaseAgent):
+class HumanAgent:
     """Agent humain qui interagit via la console."""
     def __init__(self, action_num):
-        super().__init__()
         self.action_num = action_num
 
     def step(self, state):
